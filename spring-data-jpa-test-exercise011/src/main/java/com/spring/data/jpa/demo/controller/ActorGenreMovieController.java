@@ -1,4 +1,4 @@
-package com.spring.data.jpa.demo.test;
+package com.spring.data.jpa.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
