@@ -24,42 +24,38 @@ public class ActorGenreMovieController {
 	
 	public void run() {
 		//Inserting
-		
-		// GenreRepository....
 		Genre g1 = new Genre("Comedy", null);
 		Genre g2 = new Genre("Intertainment", null);
 		Genre g3 = new Genre("Romantic", null);
 		
-		//6.	Saving objects of type Genre to the database
+		//6.	Saving objects 
 		genreRepository.save(g1);
 		genreRepository.save(g2);
 		genreRepository.save(g3);
 		
-		// ActorRepository.....
-		Actor a1 = new Actor("Sunil", "Shetti", 1960, null);
-		Actor a2 = new Actor("Nana", "Patekar", 1955, null);
-		Actor a3 = new Actor("Salman", "Khan", 1970, null);
-		Actor a4 = new Actor("Karishma", "Kapoor", 1980, null);
+		Actor a1 = new Actor("Akshay", "kumar", 1965, null);
+		Actor a2 = new Actor("Mithun", "Chakravarti", 1960, null);
+		Actor a3 = new Actor("Boby", "deval", 1980, null);
 		
-		//7.	Saving objects of type Actor to the database
+		
+		//7.	Save objects
 		actorRepository.save(a1);
 		actorRepository.save(a2);
 		actorRepository.save(a3);
-		actorRepository.save(a4);	
 
 		// MovieRepository....
-		Movie m1 = new Movie("Chand ke Paar Chalo ", 1990, g1, null);
-		Movie m2 = new Movie("Players", 2011, g2, null);
+		Movie m1 = new Movie("Khiladi786", 2012, g1, null);
+		Movie m2 = new Movie("Suryabansham", 1990, g2, null);
 		Movie m3 = new Movie("Intelligent", 2022, g3, null);
 		
-		//16.	 adding Movie records to the database
+		//16. add Movie
 		movieRepository.save(m1);
 		movieRepository.save(m2);
 		movieRepository.save(m3);
 		
 		//Displaying
-		//9. searching Actor records by name
-		System.out.println("\n\n Searching Actor records by name : \n ");
+		//9. searching Actor by name
+		System.out.println("Searching Actor: ");
 		Actor actor1 = actorRepository.findByName("Kiara");
 				
 		System.out.println(actor1.getId());
