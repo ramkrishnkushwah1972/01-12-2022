@@ -26,8 +26,8 @@ public class ActorGenreMovieController {
 		//Inserting
 		
 		// GenreRepository....
-		Genre g1 = new Genre("Romantic", null);
-		Genre g2 = new Genre("Action", null);
+		Genre g1 = new Genre("Comedy", null);
+		Genre g2 = new Genre("Intertainment", null);
 		Genre g3 = new Genre("Horror", null);
 		
 		//6.	Saving objects of type Genre to the database
