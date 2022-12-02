@@ -28,7 +28,7 @@ public class ActorGenreMovieController {
 		Genre g2 = new Genre("Intertainment", null);
 		Genre g3 = new Genre("Romantic", null);
 		
-		//6.	Saving objects 
+		//6.Saving objects 
 		genreRepository.save(g1);
 		genreRepository.save(g2);
 		genreRepository.save(g3);
@@ -38,7 +38,7 @@ public class ActorGenreMovieController {
 		Actor a3 = new Actor("Boby", "deval", 1980, null);
 		
 		
-		//7.	Save objects
+		//7.Save objects
 		actorRepository.save(a1);
 		actorRepository.save(a2);
 		actorRepository.save(a3);
@@ -48,12 +48,11 @@ public class ActorGenreMovieController {
 		Movie m2 = new Movie("Suryabansham", 1990, g2, null);
 		Movie m3 = new Movie("Intelligent", 2022, g3, null);
 		
-		//16. add Movie
+		//8. add Movie
 		movieRepository.save(m1);
 		movieRepository.save(m2);
 		movieRepository.save(m3);
 		
-//		Displaying
 //		9. searching Actor by name
 		System.out.println("Searching Actor: ");
 		Actor actor1 = actorRepository.findByName("Kiara");
@@ -72,7 +71,7 @@ public class ActorGenreMovieController {
 		System.out.println(actor.getLastName());
 		System.out.println(actor.getYearOfBirth());
 		
-//		11.	 returning all Actor records
+//		11.returning all Actor records
 		System.out.println("Returning all Actor records :");
 		List<Actor> actor2 = actorRepository.findAll();
 		
@@ -83,7 +82,7 @@ public class ActorGenreMovieController {
 	            System.out.println(a.getYearOfBirth());
 	      });
 		
-//		8.	removing Actor record by id from the database
+//		8.removing Actor record by id from the database
 		System.out.println("Removing Actor record by id from the database :");
 		
 		actorRepository.deleteById(1L);
@@ -92,10 +91,10 @@ public class ActorGenreMovieController {
 		List<Actor> actor3 = actorRepository.findAll();
 		
 		actor3.forEach((a) -> {
-            System.out.println(a.getId());
-            System.out.println(a.getName());
-            System.out.println(a.getLastName());
-            System.out.println(a.getYearOfBirth());
+		    System.out.println(a.getId());
+		    System.out.println(a.getName());
+		    System.out.println(a.getLastName());
+		    System.out.println(a.getYearOfBirth());
 		});
 		
 //	    13. searching for Genre records by name
@@ -105,14 +104,14 @@ public class ActorGenreMovieController {
 		System.out.println(genre1.getId());
 		System.out.println(genre1.getName());
 		
-		//14. searching for Genre records by id
+		//14.searching for Genre records by id
 		System.out.println("Searching for Genre records by id :");
 		Genre genre = genreRepository.findById(1L).get();
 		
 		System.out.println(genre.getId());
 		System.out.println(genre.getName());
 		
-		//15. returning all Genre records
+		//15.returning all Genre records
 		System.out.println("Returning all Genre records :");
 		List<Genre> genre2 = genreRepository.findAll();
 		
@@ -121,7 +120,7 @@ public class ActorGenreMovieController {
 	            System.out.println(g.getName());
 	      });
 		
-//		12.	 removing Genre records from the database
+//		12.removing Genre records from the database
 		System.out.println("Removing Genre records from the database :");
 		
 		genreRepository.deleteById(1L);
@@ -130,11 +129,11 @@ public class ActorGenreMovieController {
 		List<Genre> genre3 = genreRepository.findAll();
 		
 		genre3.forEach((g) -> {
-            System.out.println(g.getId());
-            System.out.println(g.getName());
-			});
+		    System.out.println(g.getId());
+		    System.out.println(g.getName());
+		});
 		
-//		18.	 searching Movie records by title
+//		18.searching Movie records by title
 		System.out.println("Records by title :");
 		Movie movie1 = movieRepository.findByTitle("Shershah");
 				
@@ -142,7 +141,7 @@ public class ActorGenreMovieController {
 		System.out.println(movie1.getTitle());
 		System.out.println(movie1.getYearOfRelease());
 		
-//		19.  searching for Movie records by id
+//		19.searching for Movie records by id
 		System.out.println("Movie records by id :");
 		Movie movie = movieRepository.findById(1L).get();
 		
@@ -150,7 +149,7 @@ public class ActorGenreMovieController {
 		System.out.println(movie.getTitle());
 		System.out.println(movie.getYearOfRelease());
 		
-//		20.	 returning all Movie records
+//		20.returning all Movie records
 		System.out.println("All Movie records :");
 		List<Movie> movie2 = movieRepository.findAll();
 		
@@ -158,9 +157,9 @@ public class ActorGenreMovieController {
 	            System.out.println(m.getId());
 	            System.out.println(m.getTitle());
 	            System.out.println(m.getYearOfRelease());         
-	      });
+	      	});
 		
-//		17.	 removing Movie records from the database
+//		17.removing Movie records from the database
 		System.out.println("Movie records from the database :");
 		
 		movieRepository.deleteById(1L);
@@ -169,10 +168,9 @@ public class ActorGenreMovieController {
 		List<Movie> movie3 = movieRepository.findAll();
 		
 		movie3.forEach((m) -> {
-            System.out.println(m.getId());
-            System.out.println(m.getTitle());
-            System.out.println(m.getYearOfRelease());     
-			});
-		
+		    System.out.println(m.getId());
+		    System.out.println(m.getTitle());
+		    System.out.println(m.getYearOfRelease());     
+		});
 	}
 }
